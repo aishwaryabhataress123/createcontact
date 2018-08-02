@@ -48,14 +48,13 @@
 			<img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;">
 		</div>
 		<div class="inner-container">
-		<form action="signup.php" method="post">
+		<form action="index.php" method="post">
 			<input type="text" name="firstname" placeholder="First Name" class="credentials" value="<?php echo $firstname;?>">
 			<input type="text" name="lastname" placeholder="Last Name" class="credentials" style="margin-top:5%;" value="<?php echo $lastname;?>">
 			<input type="number" name="phonenumber" placeholder="Phone Number" class="credentials" style="margin-top:5%;" value="<?php echo $phonenumber;?>">
 			<input type="number" name="mobilenumber" placeholder="Mobile Number" class="credentials" style="margin-top:5%;" value="<?php echo $mobilenumber;?>">
 			<input type="text" name="verificationcode" placeholder="Verification Code" class="credentials" style="margin-top:5%;" value="<?php echo $verificationcode;?>">
 			<input type="text" name="emailid" placeholder="Email Id" class="credentials" style="margin-top:5%;" value="<?php echo $emailid;?>">
-			<input type="hidden" name="profileId" value="00e1J0000017aBdQAI">
 			<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;" value="<?php echo $password;?>">
 			<input type="password" name="repassword" placeholder="Re-enter Password" class="credentials" style=" margin-top:5%;" value="<?php echo $repassword;?>">
 			<input type="text" name="userkey" placeholder="User Key" class="credentials" style="margin-top:5%;" value="<?php echo $userkey;?>">
@@ -67,7 +66,7 @@
 </body>
 </html>
 <?php
-	$db = pg_connect("host=ec2-107-22-169-45.compute-1.amazonaws.com port=5432 dbname=d9sb7vq0m3dhlu user=ezvhvjviygwpqp password=d9e906b9ec5f15cc363285f8de8859faa1843e0eb723596df7562186375e6c8b");
+	$db = pg_connect("host=ec2-23-21-198-69.compute-1.amazonaws.com port=5432 dbname=dcrqc1sphs49ra user=sszuhptfcszfje password=5f7d705bf8d76df2591c454499d2c2db9c33f33672987de2ceb1112dac372519");
 	if (!$db) {
   		echo "An error occurred.\n";
   		exit;	
