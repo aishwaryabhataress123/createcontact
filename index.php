@@ -3,7 +3,7 @@
 </head>
 <style>
 	.container{
-		height:650px; 
+		height:675px; 
 		width:400px; 
 		align:center;
 		background-color:white; 
@@ -22,7 +22,7 @@
 		margin-left:auto;
 		margin-right:auto;
 		margin-top:35px;
-		padding-top:0px;
+		padding-top:5px;
 	}
 	.credentials{
 		width:100%;
