@@ -11,7 +11,7 @@
 		border-radius:80px;
 		margin-left:auto;
 		margin-right:auto;
-		margin-top:35px;
+		margin-top:50px;
 		position: relative;
 		display:block;	
 	}
@@ -21,7 +21,7 @@
 		width:275px;
 		margin-left:auto;
 		margin-right:auto;
-		margin-top:35px;
+		margin-top:20px;
 		padding-top:20px;
 	}
 	.credentials{
