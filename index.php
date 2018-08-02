@@ -3,12 +3,12 @@
 </head>
 <style>
 	.container{
-		height:950px; 
+		height:750px; 
 		width:400px; 
 		align:center;
 		background-color:white; 
 		border: 2px solid white; 
-		border-radius:40px;
+		border-radius:60px;
 		margin-left:auto;
 		margin-right:auto;
 		margin-top:50px;
