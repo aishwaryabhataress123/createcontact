@@ -22,7 +22,7 @@
 		margin-left:auto;
 		margin-right:auto;
 		margin-top:35px;
-		padding-top:5px;
+		padding-top:0px;
 	}
 	.credentials{
 		width:100%;
