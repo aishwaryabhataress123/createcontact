@@ -21,8 +21,8 @@
 		width:275px;
 		margin-left:auto;
 		margin-right:auto;
-		margin-top:20px;
-		padding-top:20px;
+		margin-top:35px;
+		padding-top:5px;
 	}
 	.credentials{
 		width:100%;
