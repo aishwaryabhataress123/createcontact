@@ -70,10 +70,10 @@
 		$row = pg_fetch_row($result);
 		if($row == NULL)
 		{
-			header("Location: index.php");
+			header("Location: home.php");
 		}
 		else
 		{
-			header("Location: home.php");
+			header("Location: index.php");
 		}
 ?> 
