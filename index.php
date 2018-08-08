@@ -68,7 +68,7 @@
 		$result= pg_query($query);
 		return $db;
 		$row = pg_fetch_row($result);
-		if($row == NULL)
+		if(!$row)
 		{
 			header("Location: home.php");
 		}
