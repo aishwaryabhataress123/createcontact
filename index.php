@@ -70,11 +70,8 @@
   		echo "An error occurred.\n";
   		exit;	
 	}
-	else
-	{
 		echo " Database connected sucessfully ";
 		$query = "INSERT INTO salesforce.Contact(FirstName, LastName,Phone, MobilePhone, Email, Password__c,User_Key__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[phonenumber]', '$_POST[mobilenumber]','$_POST[emailid]','$_POST[password]',$_POST[userkey]);";
 		$result= pg_query($query);
-	}
-	return $db;
+		return $db;
 ?> 
