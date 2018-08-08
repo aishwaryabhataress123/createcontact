@@ -47,7 +47,7 @@
 				<img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;margin-top:5px;">
 			</div>
 			<div class="inner-container">
-				<form method="post">
+				<form action="home.php" method="post">
 					<input type="text" name="emailid" placeholder="Email Id" class="credentials" value="<?php echo $email;?>">
 					<input type="password" name="password" placeholder="Password" class="credentials" value="<?php echo $password;?>" style=" margin-top:5%;">
 				
@@ -67,13 +67,4 @@
 		$query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email ='$_POST[email]' AND Password__c ='$_POST[password]';";
 		$result= pg_query($query);
 		return $db;
-		$row = pg_fetch_row($result);
-		if(!$row)
-		{
-			header("Location: home.php");
-		}
-		else
-		{
-			header("Location: index.php");
-		}
 ?> 
