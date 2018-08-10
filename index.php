@@ -47,7 +47,7 @@
 			<img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;margin-top:5px;">
 	</div>
 		<div class="inner-container">
-			<form action="" method="post">
+			<form action="home.php" method="post">
 				<input type="text" name="emailid" placeholder="Email Id" class="credentials" value="<?php echo $email;?>">
 				<input type="password" name="password" placeholder="Password" class="credentials" value="<?php echo $password;?>" style=" margin-top:5%;">
 
@@ -67,11 +67,19 @@ if (!$db)
 }
 $query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = '$_POST[email]' AND Password__c = '$_POST[password]';";
 $result= pg_query($query);	
-return $db;	
-if(pg_num_rows($result) != 1) {
-   $redirect = "index.php";
-} else {
-    $redirect = "home.php";
+return $db;
+if ( filter_has_var( INPUT_GET, 'submit' ) ) {
+$s1 = $_GET['email'];
+ 
 }
-header("Location: $redirect");
+//echo 'the state you entered is ' . $s1;
+if(isset($_POST[email]))
+{
+ if ($s1 != $_POST[email])
+    echo "<script type="text/javascript">alert("Login Insuccessful");</script>" ; 
+  else
+  {
+	echo "<script type="text/javascript">alert("Successful!!!!!!!!!!!!");</script>" ;  
+  }
+ }
  ?>
