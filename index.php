@@ -52,7 +52,7 @@
 		echo "An error occurred.\n";
 		exit;	
 	}
-	$query = "SELECT count(1) INTO found_entry FROM salesforce.contact WHERE Email ='$_POST[email]' AND Password__c ='$_POST[password]';";
+	$query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email ='$_POST[email]' AND Password__c ='$_POST[password]';";
 	$result= pg_query($query);	
 	return $db;	
 
