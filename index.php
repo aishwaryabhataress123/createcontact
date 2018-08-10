@@ -67,7 +67,7 @@ if (!$db)
 }
 $emailNew = $_POST[email];
 $passwordNew = $_POST[password];
-$query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = $emailNew AND Password__c = $passwordNew;";
+$query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = '$emailNew' AND Password__c = '$passwordNew';";
 $result= pg_query($query);	
 return $db;	
 if(pg_numrows($result) != 1) {
