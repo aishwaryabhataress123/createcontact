@@ -67,4 +67,10 @@
 		$query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email ='$_POST[email]' AND Password__c ='$_POST[password]';";
 		$result= pg_query($query);
 		return $db;
+		if($result->num_rows() === 1){
+			// User/pass are correct
+			echo "Welcome, " . $username;
+		} else {
+		// User/pass are incorrect
+		}
 ?> 
