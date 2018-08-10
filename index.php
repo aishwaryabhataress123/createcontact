@@ -68,7 +68,7 @@ if (!$db)
 $query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = '$_POST[email]' AND Password__c = '$_POST[password]';";
 $result= pg_query($query);	
 return $db;	
-if(pg_numrows($result) != 1) {
+if(pg_num_rows($result) != 1) {
    $redirect = "index.php";
 } else {
     $redirect = "home.php";
