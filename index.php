@@ -45,8 +45,7 @@
 	<div class="container">
 		<div class="signin">
 			<img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;margin-top:5px;">
-		</div>
-	<?php
+			<?php
     $msg = '';
 	$db = pg_connect("host=ec2-54-235-212-58.compute-1.amazonaws.com port=5432 dbname=d11ltu6a8ne38d user=pkdtdgarpbsxgk password=8566866e71a89e3f3eadc11f4960e689801bfad888b96279954e1a09f94ba443");
 	if (!$db) {
@@ -69,6 +68,7 @@
         }
      }
  ?>
+		</div>
 		<div class="inner-container">
 			<form action="home.php" method="post">
 				<input type="text" name="emailid" placeholder="Email Id" class="credentials" value="<?php echo $email;?>">
