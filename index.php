@@ -58,26 +58,21 @@
 	</div>
 </body>
 </html>
-			<?php
-    $msg = '';
-	$db = pg_connect("host=ec2-54-235-212-58.compute-1.amazonaws.com port=5432 dbname=d11ltu6a8ne38d user=pkdtdgarpbsxgk password=8566866e71a89e3f3eadc11f4960e689801bfad888b96279954e1a09f94ba443");
-	if (!$db) {
-		echo "An error occurred.\n";
-		exit;	
-	}
-	$query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email ='$_POST[email]' AND Password__c ='$_POST[password]';";
-	$result= pg_query($query);	
-	return $db;	
-
-    if (isset(!empty($_POST['username']) && !empty($_POST['password'])) 
-    {
-        if ($_POST['username'] == $row['Email'] && $_POST['password'] == $row['Password__c']) 
-        {
-	  echo 'You have entered valid use name and password';
-        }
-	else
-	{
-	  $msg = 'Wrong username or password';
-        }
-     }
+<?php
+$db = pg_connect("host=ec2-54-235-212-58.compute-1.amazonaws.com port=5432 dbname=d11ltu6a8ne38d user=pkdtdgarpbsxgk password=8566866e71a89e3f3eadc11f4960e689801bfad888b96279954e1a09f94ba443");
+if (!$db) 
+{
+	echo "An error occurred.\n";
+	exit;	
+}
+$emailNew = $_POST[email];
+$passwordNew = $_POST[password];
+$query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email =: $emailNew AND Password__c =: $passwordNew;";
+$result= pg_query($query);	
+return $db;	
+if(pg_num_rows($result) != 1) {
+   echo '<script type="text/javascript">alert("hello! ERROR");</script>';
+} else {
+    echo '<script type="text/javascript">alert("LOGGED IN !!!");</script>';
+}
  ?>
