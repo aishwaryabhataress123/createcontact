@@ -69,13 +69,13 @@ $query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = '$_PO
 $result= pg_query($query);	
 return $db;
 if ( filter_has_var( INPUT_GET, 'submit' ) ) {
-$s1 = $_GET['email'];
+$s1 = $_GET['Email'];
  
 }
 //echo 'the state you entered is ' . $s1;
 if(isset($_POST[email]))
 {
- if ($s1 != $_POST[email])
+ if ($s1 = '$_POST[email]')
     echo "<script type="text/javascript">alert("Login Insuccessful");</script>" ; 
   else
   {
