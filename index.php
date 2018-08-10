@@ -69,8 +69,8 @@
 		return $db;
 		if($result->num_rows() === 1){
 			// User/pass are correct
-			echo "Welcome, " . $username;
+			echo "Welcome";
 		} else {
-		// User/pass are incorrect
+			echo "Not at all Welcome";
 		}
 ?> 
