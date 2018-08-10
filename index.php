@@ -70,7 +70,7 @@ $passwordNew = $_POST[password];
 $query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = $emailNew AND Password__c = $passwordNew;";
 $result= pg_query($query);	
 return $db;	
-if(pg_num_rows($result) != 1) {
+if(pg_numrows($result) != 1) {
    echo '<script type="text/javascript">alert("hello! ERROR");</script>';
 } else {
     echo '<script type="text/javascript">alert("LOGGED IN !!!");</script>';
