@@ -68,14 +68,4 @@ if (!$db)
 $query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = '$_POST[email]' AND Password__c = '$_POST[password]';";
 $result= pg_query($query);	
 return $db;
-//echo 'the state you entered is ' . $s1;
-if(isset($_POST[email]))
-{
-    echo "<script type="text/javascript">alert("Login Insuccessful");</script>" ; 
-
- }
-  else
-  {
-	echo "<script type="text/javascript">alert("Successful!!!!!!!!!!!!");</script>" ;  
-  }
  ?>
