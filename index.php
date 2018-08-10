@@ -47,7 +47,7 @@
 			<img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;margin-top:5px;">
 	</div>
 		<div class="inner-container">
-			<form action="home.php" method="post">
+			<form action="" method="post">
 				<input type="text" name="emailid" placeholder="Email Id" class="credentials" value="<?php echo $email;?>">
 				<input type="password" name="password" placeholder="Password" class="credentials" value="<?php echo $password;?>" style=" margin-top:5%;">
 
@@ -71,8 +71,9 @@ $query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = $emai
 $result= pg_query($query);	
 return $db;	
 if(pg_numrows($result) != 1) {
-   echo '<script type="text/javascript">alert("hello! ERROR");</script>';
+   $redirect = "index.php";
 } else {
-    echo '<script type="text/javascript">alert("LOGGED IN !!!");</script>';
+    $redirect = "home.php";
 }
+header("Location: $redirect");
  ?>
