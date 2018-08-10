@@ -20,7 +20,7 @@ $result= pg_query($query);
 
 $row = pg_fetch_row($result);
 
-if($row['Email']==$email && $row['Password__c']==$password)
+if($row["Email"]==$email && $row["Password__c"]==$password)
     echo"You are a validated user.";
 else
     echo"Sorry, your credentials are not valid, Please try again.";
