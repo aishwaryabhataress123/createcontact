@@ -69,7 +69,7 @@
 	$result= pg_query($query);	
 	return $db;	
 
-    if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) 
+    if (isset(!empty($_POST['username']) && !empty($_POST['password'])) 
     {
         if ($_POST['username'] == $row['Email'] && $_POST['password'] == $row['Password__c']) 
         {
@@ -81,4 +81,3 @@
         }
      }
  ?>
-	
