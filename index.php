@@ -75,7 +75,7 @@ $s1 = $_GET['Email'];
 //echo 'the state you entered is ' . $s1;
 if(isset($_POST[email]))
 {
- if ($s1 = '$_POST[email]')
+ if (!$s1)
     echo "<script type="text/javascript">alert("Login Insuccessful");</script>" ; 
   else
   {
