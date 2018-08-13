@@ -14,9 +14,13 @@ if (!$db)
 // Select the database to use
 
 $query = "SELECT Email , Password__c FROM salesforce.contact;";
-$result= pg_query($query);	
-if($row = pg_fetch_row($result)) {
-	echo "============" .$row[0];
-	echo "============" .$row[24]; 
-   }	
+$result= pg_query($query);
+$row = pg_fetch_row($result);
+while($row)
+{
+	if($row['Email'] == $email && $row['Password__c'] == $password)
+	{
+		echo "You are a validated user";
+	}
+}
 ?>
