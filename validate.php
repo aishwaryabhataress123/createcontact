@@ -21,11 +21,12 @@ echo "<br>";
 echo "Row wala password " .$row[1];
 echo "<br>";
 echo "Post wala password " .$_POST['password'];
-echo "<br>";	
-if($row[2])
+echo "<br>";
+echo "Row wala password " .$row[2];
+/*if($row[2])
 {
 	echo "You are a validated user/n";
 	echo "HELLO" .$_POST['email'];
 	exit;
-}
+}*/
 ?>
