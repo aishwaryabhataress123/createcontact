@@ -14,10 +14,14 @@ if (!$db)
 $query = "SELECT Email , Password__c FROM salesforce.contact;";
 $result= pg_query($query);
 $row = pg_fetch_row($result);
-if($row['Email'] == $_POST['email'] && $row['Password__c'] == $_POST['password'])
+echo "Row wala email " .$row['Email'] ."\n";
+echo "Post wala email " .$row['email'] ."\n";
+echo "Row wala password " .$row['Password__c'] ."\n";
+echo "Post wala password " .$row['password'] ."\n";
+/*if($row['Email'] == $_POST['email'] && $row['Password__c'] == $_POST['password'])
 {
 		echo "You are a validated user/n";
 		echo "HELLO" .$_POST['email'];
 		exit;
-}
+}*/
 ?>
