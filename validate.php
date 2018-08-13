@@ -22,7 +22,7 @@ echo "Row wala password " .$row[1];
 echo "<br>";
 echo "Post wala password " .$_POST['password'];
 echo "<br>";	
-if($row[2] == 1)
+if($row[2])
 {
 	echo "You are a validated user/n";
 	echo "HELLO" .$_POST['email'];
