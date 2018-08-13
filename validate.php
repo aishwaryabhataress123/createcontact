@@ -16,6 +16,6 @@ if (!$db)
 $query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = '$email' AND Password__c = '$password';";
 $result= pg_query($query);	
 if($row = pg_fetch_row($result)) {
-      echo "__________".$row[24]; 
+      echo "__________".$row[0]; 
    }	
 ?>
