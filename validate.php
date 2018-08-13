@@ -20,6 +20,7 @@ if($row <> 1)
 {
     	echo "------" .row[0] "----------" .row[1];
 	echo "<br>";
+	echo "You are nota validated user"; 
 }
 else
 {
