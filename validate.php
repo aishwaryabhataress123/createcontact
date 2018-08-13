@@ -28,7 +28,7 @@ echo "<br>";
 	echo "HELLO" .$_POST['email'];
 	exit;
 }*/
-echo sizeof($row);
+echo sizeof($result);
 for($i=0 ; $i<sizeof($result) ; $i++)
 {
 	if($row[0] == $_POST['email'] && $row[1] == $_POST['password'] )
