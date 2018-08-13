@@ -15,7 +15,7 @@ $query = "SELECT Email , Password__c FROM salesforce.contact;";
 $result= pg_query($query);
 $row = pg_fetch_row($result);
 session_start();
-echo "helloooooooooo" .$_SESSION[email];
+echo "helloooooooooo" .$_SESSION['email'];
 /*while($row)
 {
 	if($row['Email'] == $email && $row['Password__c'] == $password)
