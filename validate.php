@@ -38,6 +38,7 @@ foreach($row as $row)
 		echo "HELLO" .$_POST['email'];
 		exit;
 	}
+	echo "In for ech shbdfh";
 }
 
 // Grab User submitted information
