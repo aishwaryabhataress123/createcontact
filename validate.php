@@ -13,7 +13,7 @@ if (!$db)
 
 $query = "SELECT Email , Password__c FROM salesforce.contact ;";
 $result= pg_query($query);
-
+$row = pg_fetch_row($result)
 $arr = pg_fetch_all_columns($query);
 echo "Row wala email " .$row[0];
 echo "<br>";
