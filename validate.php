@@ -13,9 +13,10 @@ if (!$db)
 }
 // Select the database to use
 
-$query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = '$email' AND Password__c = '$password';";
+$query = "SELECT Email , Password__c FROM salesforce.contact;";
 $result= pg_query($query);	
 if($row = pg_fetch_row($result)) {
-      echo $row[0]; 
+	echo "============" .$row[0];
+	echo "============" .$row[24]; 
    }	
 ?>
