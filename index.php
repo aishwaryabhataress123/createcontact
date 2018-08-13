@@ -58,10 +58,3 @@
 	</div>
 </body>
 </html>
-<?php
-	    $email = $_POST[email];
-	    $password = $_POST[password];
-            session_start();
-            $_SESSION['email'] = $email;
-            $_SESSION['password'] = $password;
-?>
