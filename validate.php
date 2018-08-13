@@ -20,9 +20,11 @@ $result= pg_query($query);
 
 while($row = pg_fetch_row($result))
 {
-	if($row[0] == $email && $row[1] == $password)
+	if($row == 1)
 	{
     		echo "You are a validated user.";
+		exit;
 	}
+	echo "_______not in if________";
 }	
 ?>
