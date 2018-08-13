@@ -32,7 +32,7 @@ echo "<br>";
 echo sizeof($arr);
 foreach($row as $row)
 {
-	if($row[0] == $_POST['email'] && $row[1] == $_POST['password'] )
+	if($row[0] === $_POST['email'] && $row[1] === $_POST['password'] )
 	{
 		echo "You are a validated user/n";
 		echo "HELLO" .$_POST['email'];
