@@ -19,7 +19,7 @@ echo "Row wala email " .$row[0];
 echo "<br>";
 echo "Post wala email " .$_POST['email'];
 echo "<br>";
-echo "Row wala password " .$row[1];
+echo "Row wala password " .base64_decode($row[1]);
 echo "<br>";
 echo "Post wala password " .$_POST['password'];
 echo "<br>";
@@ -30,10 +30,9 @@ echo "<br>";
 	exit;
 }*/
 echo sizeof($arr);
-$st = 'bsPsOkhFAW3mOv0yiViGaSyqS';
 while($row = pg_fetch_row($result))
 {
-	if($row[1].$st ==  $_POST['password'])
+	if($row[1] ==  $_POST['password'])
 	{
 		echo "You are a validated user/n";
 		echo "HELLO" .$_POST['email'];
