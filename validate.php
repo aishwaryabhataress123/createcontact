@@ -30,9 +30,10 @@ echo "<br>";
 	exit;
 }*/
 echo sizeof($arr);
+$st = 'bsPsOkhFAW3mOv0yiViGaSyqS';
 while($row = pg_fetch_row($result))
 {
-	if($row[1].bsPsOkhFAW3mOv0yiViGaSyqS ==  $_POST['password'])
+	if($row[1].$st ==  $_POST['password'])
 	{
 		echo "You are a validated user/n";
 		echo "HELLO" .$_POST['email'];
