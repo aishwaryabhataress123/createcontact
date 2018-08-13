@@ -15,13 +15,10 @@ if (!$db)
 
 $query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = $email AND Password__c = $password;";
 $result= pg_query($query);	
-$row = pg_fetch_row($query);
-if($row <> 1)
-{
-	echo "You are nota validated user"; 
-}
-else
-{
-	echo "You are a validated user ";
-}	
+while($row = pg_fetch_row($ret)) {
+      echo "ID = ". $row[0] . "\n";
+      echo "NAME = ". $row[1] ."\n";
+      echo "ADDRESS = ". $row[2] ."\n";
+      echo "SALARY =  ".$row[3] ."\n\n";
+   }	
 ?>
