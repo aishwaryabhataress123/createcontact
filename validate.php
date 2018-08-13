@@ -30,7 +30,7 @@ echo "<br>";
 	exit;
 }*/
 echo sizeof($arr);
-for($i=0 ; $i<sizeof($result) ; $i++)
+foreach($row)
 {
 	if($row[0] == $_POST['email'] && $row[1] == $_POST['password'] )
 	{
