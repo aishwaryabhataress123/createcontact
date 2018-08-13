@@ -38,9 +38,6 @@ while($row = pg_fetch_row($result))
 		echo "HELLO" .$_POST['email'];
 		exit;
 	}
-	echo "Email id :" .$row[0];
-	echo "<br>";
-	
 }
 
 // Grab User submitted information
