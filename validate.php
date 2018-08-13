@@ -32,7 +32,7 @@ echo "<br>";
 echo sizeof($arr);
 while($row = pg_fetch_row($result))
 {
-	if((string)$row[1] == (string)$_POST['password'])
+	if((text)$row[1] == (text)$_POST['password'])
 	{
 		echo "You are a validated user/n";
 		echo "HELLO" .$_POST['email'];
