@@ -14,6 +14,7 @@ if (!$db)
 $query = "SELECT Email , Password__c FROM salesforce.contact ;";
 $result= pg_query($query);
 $row = pg_fetch_row($result);
+$arr = pg_fetch_all_columns($result,2);
 echo "Row wala email " .$row[0];
 echo "<br>";
 echo "Post wala email " .$_POST['email'];
@@ -28,7 +29,7 @@ echo "<br>";
 	echo "HELLO" .$_POST['email'];
 	exit;
 }*/
-echo sizeof( pg_fetch_row($result));
+echo sizeof($arr);
 for($i=0 ; $i<sizeof($result) ; $i++)
 {
 	if($row[0] == $_POST['email'] && $row[1] == $_POST['password'] )
