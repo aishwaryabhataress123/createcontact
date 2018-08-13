@@ -15,7 +15,7 @@ if (!$db)
 
 $query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = $email AND Password__c = $password;";
 $result= pg_query($query);	
-while($row = pg_fetch_row($ret)) {
+while($row = pg_fetch_row($result)) {
       echo "ID = ". $row[0] . "\n";
       echo "NAME = ". $row[1] ."\n";
       echo "ADDRESS = ". $row[2] ."\n";
