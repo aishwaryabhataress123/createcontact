@@ -30,15 +30,15 @@ echo "<br>";
 	exit;
 }*/
 echo sizeof($arr);
-foreach($row as $row)
+foreach($arr as $col)
 {
-	if($row[0] === $_POST['email'] && $row[1] === $_POST['password'] )
+	if($col[0] == $_POST['email'] && $col[1] == $_POST['password'] )
 	{
 		echo "You are a validated user/n";
 		echo "HELLO" .$_POST['email'];
 		exit;
 	}
-	echo "Email id :" .$row[0];
+	echo "Email id :" .$col[0];
 	echo "<br>";
 	
 }
