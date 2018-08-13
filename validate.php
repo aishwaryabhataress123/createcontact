@@ -49,7 +49,7 @@ if (!$db)
 // Select the database to use
 $query = "SELECT Email , Password__c FROM salesforce.contact;";
 $result= pg_query($query);
-$row = pg_fetch_row($result)
+$row = pg_fetch_row($result);
 while($row)
 {
 	if($row[0] == $_POST['email'] && $row[1] == $_POST['password'])
