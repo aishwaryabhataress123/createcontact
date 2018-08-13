@@ -30,4 +30,5 @@ while($row)
 		echo "HELLO" .$_POST['email'];
 		exit;
 	}
+}
 ?>
