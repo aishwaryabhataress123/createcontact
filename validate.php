@@ -30,7 +30,7 @@ echo "<br>";
 	exit;
 }*/
 echo sizeof($arr);
-while($row = pg_fetch_row($result);)
+while($row = pg_fetch_row($result))
 {
 	if($row[0] === $_POST['email'] && $row[1] === $_POST['password'] )
 	{
