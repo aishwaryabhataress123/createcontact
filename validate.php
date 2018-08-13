@@ -22,7 +22,7 @@ echo "Row wala password " .$row[1];
 echo "<br>";
 echo "Post wala password " .$_POST['password'];
 echo "<br>";
-while($row)
+while(1)
 {	
 	if($row[0] == $_POST['email'] && $row[1] == $_POST['password'])
 	{
