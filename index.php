@@ -59,7 +59,9 @@
 </body>
 </html>
 <?php
+	    $email = $_POST[email];
+	    $password = $_POST[password];
             session_start();
-            $_SESSION['email'] = $_POST[email];
-            $_SESSION['password'] = $_POST[password];
+            $_SESSION['email'] = $email;
+            $_SESSION['password'] = $password;
 ?>
