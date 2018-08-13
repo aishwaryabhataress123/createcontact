@@ -14,11 +14,11 @@ if (!$db)
 $query = "SELECT Email , Password__c FROM salesforce.contact;";
 $result= pg_query($query);
 $row = pg_fetch_row($result);
-echo "Row wala email " .$row[Email];
+echo "Row wala email " .$row[0];
 echo "<br>";
 echo "Post wala email " .$_POST['email'];
 echo "<br>";
-echo "Row wala password " .$row[Password__c];
+echo "Row wala password " .$row[1];
 echo "<br>";
 echo "Post wala password " .$_POST['password'];
 echo "<br>";
