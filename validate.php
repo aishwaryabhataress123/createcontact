@@ -21,14 +21,11 @@ echo "<br>";
 echo "Row wala password " .$row[1];
 echo "<br>";
 echo "Post wala password " .$_POST['password'];
-echo "<br>";
-while(1)
-{	
-	if($row[0] == $_POST['email'] && $row[1] == $_POST['password'])
-	{
-		echo "You are a validated user/n";
-		echo "HELLO" .$_POST['email'];
-		exit;
-	}
+echo "<br>";	
+while($row[0] == $_POST['email'] && $row[1] == $_POST['password'])
+{
+	echo "You are a validated user/n";
+	echo "HELLO" .$_POST['email'];
+	exit;
 }
 ?>
