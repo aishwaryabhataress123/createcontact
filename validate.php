@@ -11,8 +11,10 @@ if (!$db)
 	echo "An error occurred.\n";
 	exit;	
 }
-
-
+else
+{
+	echo "Database connected";
+}
 // Select the database to use
 
 $query = "SELECT Email , Password__c FROM salesforce.contact WHERE Email = $email AND Password__c = $password;";
