@@ -18,7 +18,5 @@ $result= pg_query($query);
 while($row = pg_fetch_row($result)) {
       echo "ID = ". $row[0] . "\n";
       echo "NAME = ". $row[1] ."\n";
-      echo "ADDRESS = ". $row[2] ."\n";
-      echo "SALARY =  ".$row[3] ."\n\n";
    }	
 ?>
