@@ -24,8 +24,11 @@ while($row = pg_fetch_row($result))
 }
 if($flag == 0)
 {
-	echo "<script type='text/javascript'>alert("Wrong Username or Password");window.location='index.php';</script>";
-	header("Location:index.php");
+	echo "<script type='text/javascript'>alert(\"Wrong Username or Password\")</script>";
+	//header("location:page1.php");
+	include("index.php");
+	//echo "<script type='text/javascript'>alert("Wrong Username or Password");window.location='index.php';</script>";
+	//header("Location:index.php");
 }
 // Grab User submitted information
 // Connect to the database
