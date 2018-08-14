@@ -17,8 +17,8 @@ while($row = pg_fetch_row($result))
 {
 	if($row[0] ==  $_POST['email'] && $row[1] == $_POST['password'])
 	{
-		//header("Location:home.php");
-		echo "I am Logged in";
+		header("Location:home.php");
+		exit;
 	}
 }
 //header("Location:index.php");
