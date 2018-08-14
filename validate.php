@@ -13,7 +13,7 @@ if (!$db)
 
 $query = "SELECT Email ,Password__c FROM salesforce.contact WHERE Email = $_POST['email'] AND Password__c = $_POST['password'];";
 $result= pg_query($query);
-while($row[0] ==  $_POST['email'])
+while($row = pg_fetch_row($result))
 {
 	if($row[1] ==  $_POST['password'])
 	{
