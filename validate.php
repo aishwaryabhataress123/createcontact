@@ -28,7 +28,7 @@ while($row[0] ==  $_POST['email'])
 	}
 	else
 	{
-		header(Location:index.php);
+		header("Location:index.php");
 	}
 }
 
