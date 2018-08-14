@@ -11,23 +11,18 @@ if (!$db)
 }
 // Select the database to use
 
-$query = "SELECT Email ,Password__c FROM salesforce.contact WHERE Email = $_POST['email'] AND Password__c = $_POST['password'];";
+$query = "SELECT Email ,Password__c FROM salesforce.contact;";
 $result= pg_query($query);
 while($row = pg_fetch_row($result))
 {
-	if($row[1] ==  $_POST['password'])
+	if($row[0] ==  $_POST['email'] && $row[1] == $_POST['password'])
 	{
-		echo "<br>";
-		echo "<br>";
-		echo "<br>";
-		echo "You are a validated user";
-		echo "<br>";
-		echo "HELLO" .$_POST['email'];
-		echo "<br>";
+		header("Location:home.php");
 		exit;
 	}
 	else
 	{
+		echo "Wrong login credentials";
 	}
 }
 
