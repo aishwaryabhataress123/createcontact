@@ -11,10 +11,9 @@ if (!$db)
 }
 // Select the database to use
 
-$query = "SELECT Email , Password__c FROM salesforce.contact ;";
+$query = "SELECT Email ,Password__c FROM salesforce.contact;";
 $result= pg_query($query);
 $row = pg_fetch_row($result);
-$arr = pg_fetch_all_columns($query);
 echo "Row wala email " .$row[0];
 echo "<br>";
 echo "Post wala email " .$_POST['email'];
@@ -23,19 +22,17 @@ echo "Row wala password " .$row[1];
 echo "<br>";
 echo "Post wala password " .$_POST['password'];
 echo "<br>";
-/*if($row[2])
-{
-	echo "You are a validated user/n";
-	echo "HELLO" .$_POST['email'];
-	exit;
-}*/
-echo sizeof($arr);
 while($row = pg_fetch_row($result))
 {
 	if($row[1] ==  $_POST['password'])
 	{
-		echo "You are a validated user/n";
+		echo "<br>";
+		echo "<br>";
+		echo "<br>";
+		echo "You are a validated user";
+		echo "<br>";
 		echo "HELLO" .$_POST['email'];
+		echo "<br>";
 		exit;
 	}
 }
