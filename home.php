@@ -13,7 +13,7 @@
   height:40px;
   color:white;
 }
-.ul{
+ul{
    list-style-type:none;
 }
 .mainframe{
