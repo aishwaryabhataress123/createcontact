@@ -27,7 +27,7 @@ li a:hover{
   color:#04C5F9;
 }
 a.active{
-      background-color:black;
+      background-color:white;
   color:#04C5F9;
 }
 .mainframe{
