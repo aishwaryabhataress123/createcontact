@@ -46,13 +46,17 @@ $email = $password = "";
 $emailErr = $pwdErr = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if (empty($_POST["email"])) {
-	if(!preg_match("/^\S+@[\w\d.-]{2,}\.[\w]{2,6}$/iU",$email))
+	if(!preg_match("/^\S+@[\w\d.-]{2,}\.[\w]{2,6}$/iU",$_POST["email"]))
 	{
 		$emailErr = "Email is required";
 	}
 } else {
 $email = test_input($_POST["email"]);
 // check if e-mail address is well-formed
+	if(!preg_match("/^\S+@[\w\d.-]{2,}\.[\w]{2,6}$/iU",$email))
+	{
+		$emailErr = "Email is required";
+	}	
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 $emailErr = "Invalid email format"; 
 }
