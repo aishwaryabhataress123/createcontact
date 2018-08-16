@@ -47,7 +47,7 @@ a.active{
 </ul>
 </div>
 <div class="mainframe">
- <p>Welcome <?php echo $_GET["name"]; ?> Welcome <?php echo $_GET["lastname"]; ?> </p>
+ <p>Welcome <?php echo $_GET["email"]; ?> </p>
 </div>
 </body>
 </html>
