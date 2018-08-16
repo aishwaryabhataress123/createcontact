@@ -2,13 +2,13 @@
 <head>
 </head>
 <script>
-function validateForm() {
+/*function validateForm() {
     var x = document.forms["signin"]["email"].value;
     if (x == "") {
         alert("Email must be filled out");
         return false;
     }
-}
+}*/
 </script>
 <style>
 .error{
@@ -87,7 +87,7 @@ return $data;
 </div>
 <div class="inner-container">
 <form method="post" action="validate.php" name="signin" onsubmit="return validateForm()">
-	<input type="text" name="email" placeholder="Email Id" class="credentials">
+	<input type="text" name="email" placeholder="Email Id" class="credentials" required>
 	<span class="error"><?php echo $emailErr;?></span>
 	<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;">
 	<span class="error"><?php echo $pwdErr;?></span>
