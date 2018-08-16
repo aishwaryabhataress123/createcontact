@@ -1,6 +1,16 @@
 <html>
 <head>
 <style>
+  .header{
+  
+  }
+  .logo{
+    height:100px;
+    width:100px;
+  }
+  .body{
+  
+  }
 </style>
 </head>
 <body>
