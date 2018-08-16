@@ -44,7 +44,7 @@ text-align:center;
 <?php
 $email = $password = "";
 $emailErr = $pwdErr = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+/*if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if (empty($_POST["email"])) {
 } else {
 $email = test_input($_POST["email"]);
@@ -58,7 +58,7 @@ $pwdErr = "Password is required";
 } else {
 $password = test_input($_POST["password"]);
 }
-}
+}*/
 
 function test_input($data) {
 $data = trim($data);
