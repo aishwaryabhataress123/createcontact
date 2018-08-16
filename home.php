@@ -11,7 +11,7 @@
   background-color:#04C5F9;
   width:100%;
   height:40px;
-  padding-top:20px;
+  color:white;
 }
 .mainframe{
 
