@@ -16,11 +16,11 @@
 ul{
    list-style-type:none;
 }
-li{
+li a{
   float:left;
   padding-top:10px;
   }
-  li hover{
+  li a:hover{
     background-color:white;
     color:#04C5F9;
   }
@@ -37,7 +37,7 @@ li{
 </div>
 <div class="menu">
   <ul>
-    <li>HOME</li>
+    <li><a>HOME</a></li>
   </ul>
 </div>
 <div class="mainframe">
