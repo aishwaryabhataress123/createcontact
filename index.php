@@ -1,6 +1,15 @@
 <html>
 <head>
 </head>
+<script>
+function validateForm() {
+    var x = document.forms["signin"]["email"].value;
+    if (x == "") {
+        alert("Email must be filled out");
+        return false;
+    }
+}
+</script>
 <style>
 .error{
 color:red;
@@ -81,7 +90,7 @@ return $data;
 <img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;margin-top:5px;">
 </div>
 <div class="inner-container">
-<form method="post" action="validate.php">
+<form method="post" action="validate.php" name="signin" onsubmit="return validateForm()">
 	<input type="text" name="email" placeholder="Email Id" class="credentials">
 	<span class="error"><?php echo $emailErr;?></span>
 	<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;">
