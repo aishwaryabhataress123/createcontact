@@ -20,7 +20,7 @@
 <body>
 <div class="header">
 <div class="logo">
-  <img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:100px;width:100px;">
+  <img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:100px;width:200px;">
 </div>
 </div>
 <div class="menu">
