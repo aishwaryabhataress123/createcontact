@@ -13,6 +13,9 @@
   height:40px;
   color:white;
 }
+.ul{
+   list-style-type:none;
+}
 .mainframe{
 
 }
