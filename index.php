@@ -42,8 +42,6 @@
 }
 </style>
 	
-
-	
 <body style="background-color:#04C5F9">
 	<?php
 $email = $password = "";
