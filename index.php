@@ -44,7 +44,7 @@
 <body style="background-color:#04C5F9">
 	<?php
 $email = $password = "";
-$emailErr = "";	
+$emailErr = $pwdErr = "";	
 	
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (empty($_POST["email"])) {
@@ -55,6 +55,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Invalid email format"; 
 	}
+  }
+	if (empty($_POST["password"])) {
+    $pwdErr = "Name is required";
+  } else {
+    $password = test_input($_POST["password"]);
   }
 }
 	
