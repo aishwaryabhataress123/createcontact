@@ -5,8 +5,8 @@
   
   }
   .logo{
-    height:100px;
-    width:100px;
+    height:10px;
+    width:10px;
   }
   .body{
   
