@@ -11,6 +11,7 @@
   background-color:#04C5F9;
   width:100%;
   height:40px;
+  padding-top:20px;
 }
 .mainframe{
 
@@ -24,6 +25,9 @@
 </div>
 </div>
 <div class="menu">
+  <ul>
+    <li>HOME</li>
+  </ul>
 </div>
 <div class="mainframe">
 </div>
