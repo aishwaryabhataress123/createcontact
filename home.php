@@ -20,7 +20,7 @@ li a{
   float:left;
     display: block;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 16px;
   }
   li a:hover{
     background-color:white;
