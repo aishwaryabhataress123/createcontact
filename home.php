@@ -18,7 +18,9 @@ ul{
 }
 li a{
   float:left;
-  padding-top:10px;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
   }
   li a:hover{
     background-color:white;
