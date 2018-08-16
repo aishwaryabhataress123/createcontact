@@ -2,6 +2,9 @@
 <head>
 </head>
 <style>
+.error{
+	color:red;
+}
 .container{
 	height:350px; 
 	width:350px; 
@@ -57,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
   }
 	if (empty($_POST["password"])) {
-    $pwdErr = "Name is required";
+    $pwdErr = "Password is required";
   } else {
     $password = test_input($_POST["password"]);
   }
@@ -77,9 +80,10 @@ function test_input($data) {
 	<div class="inner-container">
 		<form action="validate.php" method="post">
 			<input type="text" name="email" placeholder="Email Id" class="credentials" value="<?php echo $email;?>">
-			<span><?php echo $emailErr;?></span>
+			<span class="error"><?php echo $emailErr;?></span>
 			<input type="password" name="password" placeholder="Password" class="credentials" value="<?php echo $password;?>" style=" margin-top:5%;">
-
+			<span class="error"><?php echo $pwdErr;?></span>
+			
 			<input type="submit" name="submit" value="Log In" class="credentials" style=" margin-top:5%; text-align:center; background-color:#04C5F9; color:white; ">				
 			<p>Not a member? &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <a href="signup.php" style="color:black;">SignUp Here</a></p>
 		</form>
