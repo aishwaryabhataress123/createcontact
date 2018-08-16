@@ -46,7 +46,7 @@ $email = $password = "";
 $emailErr = $pwdErr = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if (empty($_POST["email"])) {
-	if(! preg_match('/^\S+@[\w\d.-]{2,}\.[\w]{2,6}$/iU', $email))
+	if(!preg_match("/^\S+@[\w\d.-]{2,}\.[\w]{2,6}$/iU",$email))
 	{
 		$emailErr = "Email is required";
 	}
