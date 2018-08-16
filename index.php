@@ -6,7 +6,7 @@
 	color:red;
 }
 .container{
-	height:400px; 
+	height:375px; 
 	width:350px; 
 	align:center;
 	background-color:white; 
