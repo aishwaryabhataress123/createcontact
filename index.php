@@ -82,7 +82,7 @@ function test_input($data) {
 			<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;">
 			<span class="error"><?php echo $pwdErr;?></span>
 			
-			<input type="submit" name="submit" value="Log In" action="validate.php" class="credentials" style=" margin-top:5%; text-align:center; background-color:#04C5F9; color:white; ">				
+			<input type="submit" name="submit" value="Log In" onclick="validate.php" class="credentials" style=" margin-top:5%; text-align:center; background-color:#04C5F9; color:white; ">				
 			<p>Not a member? &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <a href="signup.php" style="color:black;">SignUp Here</a></p>
 		</form>
 	</div>
