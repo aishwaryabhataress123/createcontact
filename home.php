@@ -20,6 +20,10 @@ li{
   float:left;
   padding-top:10px;
   }
+  li hover{
+    background-color:white;
+    color:#04C5F9;
+  }
 .mainframe{
 
 }
