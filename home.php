@@ -16,6 +16,10 @@
 ul{
    list-style-type:none;
 }
+li{
+  float:left;
+  padding-top:20px;
+  }
 .mainframe{
 
 }
