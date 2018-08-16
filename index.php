@@ -39,7 +39,10 @@
 }
 </style>
 	
-<?php
+
+	
+<body style="background-color:#04C5F9">
+	<?php
 $email = $password = "";
 $emailErr = "";	
 	
@@ -61,8 +64,6 @@ function test_input($data) {
 	$data = htmlspecialchars($data);
 	return $data;
 ?>
-	
-<body style="background-color:#04C5F9">	
 <div class="container">
 	<div class="signin">
 		<img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;margin-top:5px;">
