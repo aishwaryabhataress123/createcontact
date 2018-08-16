@@ -6,7 +6,7 @@
 	color:red;
 }
 .container{
-	height:350px; 
+	height:400px; 
 	width:350px; 
 	align:center;
 	background-color:white; 
@@ -79,9 +79,9 @@ function test_input($data) {
 </div>
 	<div class="inner-container">
 		<form action="validate.php" method="post">
-			<input type="text" name="email" placeholder="Email Id" class="credentials" value="<?php echo $email;?>">
+			<input type="text" name="email" placeholder="Email Id" class="credentials">
 			<span class="error"><?php echo $emailErr;?></span>
-			<input type="password" name="password" placeholder="Password" class="credentials" value="<?php echo $password;?>" style=" margin-top:5%;">
+			<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;">
 			<span class="error"><?php echo $pwdErr;?></span>
 			
 			<input type="submit" name="submit" value="Log In" class="credentials" style=" margin-top:5%; text-align:center; background-color:#04C5F9; color:white; ">				
