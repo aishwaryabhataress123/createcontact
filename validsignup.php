@@ -23,7 +23,7 @@ while($row = pg_fetch_row($result1))
 		exit;
 	}
 }
-if($flag == 0)
+if($flag < 1)
 {
 	echo "<script type='text/javascript'>alert(\"Sign Up Failed! Enter proper emailid and userkey\")</script>";
 	include("index.php");
