@@ -103,19 +103,19 @@ $lnameErr = "Only letters and white space allowed";
 		$submit = 0;
 		while ($row = pg_fetch_row($result1)) 
 		{
-			if($row[0] == $_POST['email'])
+			if($row[0] == $_POST['email']){
 			$submit++;
-			exit;
+			exit;}
 		}
 		if($submit == 0)
 		{
 			echo "<script type='text/javascript'>alert('Record Not Inserted! Kindly check your emailid or userkey!');</script>";
-			header("Location:signup.php")
+			header("Location:signup.php");
 		}
 		else if($submit == 1)
 		{
 			echo "<script type='text/javascript'>alert('Record Inserted Successfully');</script>";
-			header("Location:index.php")
+			header("Location:index.php");
 		}
 	}
 return $db;
