@@ -98,10 +98,10 @@ $lnameErr = "Only letters and white space allowed";
 		$query = "SELECT id,firstname,lastname,Email FROM salesforce.Contact WHERE Email = '".$_POST['email']."'";
 		$result= pg_query($query);
 		$count=0;
-		foreach ($result->records as $record) 
+		while ($row = pg_fetch_row($result)) 
 		{
 			$count++;
-			break;
+			exit;
 		}
 		if($count > 0)
 		{ 
@@ -116,7 +116,7 @@ $lnameErr = "Only letters and white space allowed";
 		$query = "SELECT Email,Password__c,User_Key__c FROM salesforce.contact WHERE User_Key__c ='".$_POST['userkey']."'";
 		$result= pg_query($query);
 		$submit = 0;
-		foreach ($result->records as $record) 
+		while ($row = pg_fetch_row($result)) 
 		{
 			$submit++;
 			break;
