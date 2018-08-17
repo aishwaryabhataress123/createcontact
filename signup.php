@@ -9,6 +9,13 @@
                alert("Passwords do no match");
                return false;
             }
+    var x = document.forms["signup"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
         }
      </script>
 </head>
@@ -82,7 +89,7 @@ $lnameErr = "Only letters and white space allowed";
 		<img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;">
 	</div>
 	<div class="inner-container">
-	<form action="index.php" method="post" onsubmit="return validate()">
+	<form name="signup" action="index.php" method="post" onsubmit="return validate()">
 		<input type="text" name="firstname" placeholder="First Name" class="credentials" required>
 		<input type="text" name="lastname" placeholder="Last Name" class="credentials" style="margin-top:5%;" required>
 		<input type="number" name="phonenumber" placeholder="Phone Number" class="credentials" style="margin-top:5%;" value="<?php echo $phonenumber;?>">
