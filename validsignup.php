@@ -21,6 +21,6 @@ while($row = pg_fetch_row($result))
 if($flag == 0)
 {
 	echo "<script type='text/javascript'>alert(\"Sign Up Failed! Enter proper emailid and userkey\")</script>";
-	header("Location:signup.php");
+	include("signup.php");
 }
 ?>
