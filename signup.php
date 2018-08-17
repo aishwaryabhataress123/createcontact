@@ -95,7 +95,7 @@ $lnameErr = "Only letters and white space allowed";
 	}
 	if(isset($_POST['email']))
 	{
-		$query = "Email FROM salesforce.Contact WHERE Email = '".$_POST['email']."';";
+		$query = "SELECT Email FROM salesforce.Contact WHERE Email = '".$_POST['email']."';";
 		$result= pg_query($query);
 		$count=0;
 		while ($row = pg_fetch_row($result)) 
