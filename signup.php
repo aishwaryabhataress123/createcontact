@@ -88,8 +88,8 @@ $lnameErr = "Only letters and white space allowed";
 		<input type="number" name="phonenumber" placeholder="Phone Number" class="credentials" style="margin-top:5%;" value="<?php echo $phonenumber;?>">
 		<input type="number" name="mobilenumber" placeholder="Mobile Number" class="credentials" style="margin-top:5%;" value="<?php echo $mobilenumber;?>">
 		<input type="text" name="emailid" placeholder="Email Id" class="credentials" style="margin-top:5%;" required>
-		<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;" required>
-		<input type="password" name="repassword" placeholder="Re-enter Password" class="credentials" style=" margin-top:5%;" required>
+		<input type="password" id="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;" required>
+		<input type="password" id="repassword" name="repassword" placeholder="Re-enter Password" class="credentials" style=" margin-top:5%;" required>
 		<input type="text" name="userkey" placeholder="User Key" class="credentials" style="margin-top:5%;" required>
 
 		<button type="submit" name="submit" class="credentials" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
