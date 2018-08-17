@@ -110,7 +110,7 @@ $lnameErr = "Only letters and white space allowed";
 	}
 	$query = "INSERT INTO salesforce.Contact(FirstName, LastName,Phone, MobilePhone, Email, Password__c,User_Key__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[phonenumber]', '$_POST[mobilenumber]','$_POST[emailid]','$_POST[password]','$_POST[userkey]');";
 	$result= pg_query($query);
-	return $db;
+	
 	if(isset($_POST['submit']))
 	{
 		$query = "SELECT Email,Password__c,User_Key__c FROM salesforce.contact WHERE User_Key__c ='".$_POST['userkey']."'";
@@ -130,4 +130,5 @@ $lnameErr = "Only letters and white space allowed";
 			echo "<script type='text/javascript'>alert('Record Inserted Successfully');</script>";
 		}
 	}
+return $db;
 ?> 
