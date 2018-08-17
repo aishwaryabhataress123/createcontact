@@ -2,7 +2,8 @@
 <head>
 	    <script>
         function validate(){
-
+	    var result = "<?php echo $result;"?>
+	    alert(result);
             var a = document.getElementById("password").value;
             var b = document.getElementById("repassword").value;
             if (a!=b) {
