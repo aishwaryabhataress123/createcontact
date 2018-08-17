@@ -1,5 +1,16 @@
 <html>
-<head>	
+<head>
+	    <script>
+        function validate(){
+
+            var a = document.getElementById("password").value;
+            var b = document.getElementById("repassword").value;
+            if (a!=b) {
+               alert("Passwords do no match");
+               return false;
+            }
+        }
+     </script>
 </head>
 <style>
 .container{
@@ -71,7 +82,7 @@ $lnameErr = "Only letters and white space allowed";
 		<img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;">
 	</div>
 	<div class="inner-container">
-	<form action="index.php" method="post">
+	<form action="index.php" method="post" onsubmit="return validate()">
 		<input type="text" name="firstname" placeholder="First Name" class="credentials" required>
 		<input type="text" name="lastname" placeholder="Last Name" class="credentials" style="margin-top:5%;" required>
 		<input type="number" name="phonenumber" placeholder="Phone Number" class="credentials" style="margin-top:5%;" value="<?php echo $phonenumber;?>">
@@ -96,26 +107,4 @@ $lnameErr = "Only letters and white space allowed";
 	$query = "INSERT INTO salesforce.Contact(FirstName, LastName,Phone, MobilePhone, Email, Password__c,User_Key__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[phonenumber]', '$_POST[mobilenumber]','$_POST[emailid]','$_POST[password]','$_POST[userkey]');";
 	$result= pg_query($query);
 	return $db;
-	if($_SERVER['REQUEST_METHOD'] == 'POST')
-	{
-		$query1 = "SELECT Email FROM salesforce.contact;";
-		$result1= pg_query($query);
-		return $db;
-		$submit = 0;
-		while ($row = pg_fetch_row($result1)) 
-		{
-			if($row[0] == $_POST['email']){
-			$submit++;
-			exit;}
-		}
-		if($submit == 0)
-		{
-			echo "<script type='text/javascript'>alert('Record Not Inserted! Kindly check your emailid or userkey!');</script>";
-		}
-		else if($submit == 1)
-		{
-			echo "<script type='text/javascript'>alert('Record Inserted Successfully');</script>";
-		}
-	}
-
 ?> 
