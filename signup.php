@@ -111,12 +111,10 @@ $lnameErr = "Only letters and white space allowed";
 		if($submit == 0)
 		{
 			echo "<script type='text/javascript'>alert('Record Not Inserted! Kindly check your emailid or userkey!');</script>";
-			header("Location:signup.php");
 		}
 		else if($submit == 1)
 		{
 			echo "<script type='text/javascript'>alert('Record Inserted Successfully');</script>";
-			header("Location:index.php");
 		}
 	}
 
