@@ -93,21 +93,6 @@ $lnameErr = "Only letters and white space allowed";
 		echo "An error occurred.\n";
 		exit;	
 	}
-	if(isset($_POST['email']))
-	{
-		$query = "SELECT Email FROM salesforce.Contact WHERE Email = '".$_POST['email']."';";
-		$result= pg_query($query);
-		$count=0;
-		while ($row = pg_fetch_row($result)) 
-		{
-			$count++;
-			exit;
-		}
-		if($count > 0)
-		{ 
-			echo "<script type='text/javascript'>alert('This email Id already exists!');</script>";
-		}
-	}
 	$query = "INSERT INTO salesforce.Contact(FirstName, LastName,Phone, MobilePhone, Email, Password__c,User_Key__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[phonenumber]', '$_POST[mobilenumber]','$_POST[emailid]','$_POST[password]','$_POST[userkey]');";
 	$result= pg_query($query);
 	
@@ -124,10 +109,12 @@ $lnameErr = "Only letters and white space allowed";
 		if($submit == 0)
 		{
 			echo "<script type='text/javascript'>alert('Record Not Inserted! Kindly check your emailid or userkey!');</script>";
+			header("Location:signup.php")
 		}
 		else if($submit == 1)
 		{
 			echo "<script type='text/javascript'>alert('Record Inserted Successfully');</script>";
+			header("Location:index.php")
 		}
 	}
 return $db;
