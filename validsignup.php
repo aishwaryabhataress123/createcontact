@@ -11,7 +11,7 @@ $query = "SELECT Email ,Password__c FROM salesforce.contact;";
 $result= pg_query($query);
 while($row = pg_fetch_row($result))
 {
-	if($row[0] == $_POST['email'])
+	if($row[0] == $_POST['emailid'])
 	{
 		$flag = 1;
 		header("Location:index.php");
