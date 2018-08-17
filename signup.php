@@ -88,12 +88,48 @@ $lnameErr = "Only letters and white space allowed";
 </body>
 </html>
 <?php
-$db = pg_connect("host=ec2-54-235-212-58.compute-1.amazonaws.com port=5432 dbname=d11ltu6a8ne38d user=pkdtdgarpbsxgk password=8566866e71a89e3f3eadc11f4960e689801bfad888b96279954e1a09f94ba443");
-if (!$db) {
-	echo "An error occurred.\n";
-	exit;	
-}
+	$db = pg_connect("host=ec2-54-235-212-58.compute-1.amazonaws.com port=5432 dbname=d11ltu6a8ne38d user=pkdtdgarpbsxgk password=8566866e71a89e3f3eadc11f4960e689801bfad888b96279954e1a09f94ba443");
+	if (!$db) {
+		echo "An error occurred.\n";
+		exit;	
+	}
+	if(isset($_POST['email']))
+	{
+		$query = "SELECT id,firstname,lastname,Email FROM salesforce.Contact WHERE Email = '".$_POST['email']."'";
+		$result= pg_query($query);
+		$count=0;
+		foreach ($result->records as $record) 
+		{
+			$count++;
+			break;
+		}
+		if($count > 0)
+		{ 
+			echo "<script type='text/javascript'>alert('This email Id already exists!');</script>";
+		}
+	}
 	$query = "INSERT INTO salesforce.Contact(FirstName, LastName,Phone, MobilePhone, Email, Password__c,User_Key__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[phonenumber]', '$_POST[mobilenumber]','$_POST[emailid]','$_POST[password]','$_POST[userkey]');";
 	$result= pg_query($query);
 	return $db;
+	if(isset($_POST['submit']))
+	{
+		$query = "SELECT Email,Password__c,User_Key__c FROM salesforce.contact WHERE User_Key__c ='".$_POST['userkey']."'";
+		$result= pg_query($query);
+		$submit = 0;
+		foreach ($result->records as $record) 
+		{
+			$submit++;
+			break;
+		}
+		if($submit == 0)
+		{
+			echo "<script type='text/javascript'>alert('Record Not Inserted! Kindly check your emailid or userkey!');</script>";
+			include('signup.php');
+		}
+		else if($submit == 1)
+		{
+			echo "<script type='text/javascript'>alert('Record Inserted Successfully');</script>";
+			include('index.php');
+		}
+	}
 ?> 
