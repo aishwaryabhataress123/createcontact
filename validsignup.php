@@ -14,7 +14,9 @@ while($row = pg_fetch_row($result))
 	if($row[0] == $_POST['emailid'])
 	{
 		$flag = 1;
-		header("Location:index.php");
+		echo "<script type='text/javascript'>alert(\"Sign Up Successful!!\")</script>";
+		include("index.php");
+		//header("Location:index.php");
 		exit;
 	}
 }
