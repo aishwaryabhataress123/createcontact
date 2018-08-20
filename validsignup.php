@@ -7,7 +7,7 @@ if (!$db)
 }
 $flag = 0;
 $query1 = "SELECT Email ,Password__c FROM salesforce.contact;";
-$result1= pg_query($query);
+$result1 = pg_query($query1);
 while($row = pg_fetch_row($result1))
 {
 	if($row[0] == $_POST['emailid'])
