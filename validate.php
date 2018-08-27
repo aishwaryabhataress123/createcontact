@@ -17,7 +17,7 @@ while($row = pg_fetch_row($result))
 {
 	if($row[0] == $_POST['email'] )
 	{
-		if($row[1] == $_POST['password'])
+		if($row[1] == $_POST['pwd'])
 		{
 			$flag = 1;
 			header("Location:home.php");
