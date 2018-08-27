@@ -11,8 +11,8 @@ if (!$db)
 }
 // Select the database to use
 $flag = 0;
-$query = "SELECT Email ,Password__c FROM salesforce.contact;";
-$result= pg_query($query);
+//$query = "SELECT Email ,Password__c FROM salesforce.contact;";
+$result= pg_query("SELECT Email ,Password__c FROM salesforce.contact;");
 while($row = pg_fetch_row($result))
 {
 	if($row[0] == $_POST['email'] )
