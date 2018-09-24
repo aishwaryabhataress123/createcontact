@@ -40,36 +40,36 @@ All Raised Cases
 <form action="/action_page.php">
   Contact Name:<br>
   <input type="text" name="ContactName">
-  <br>
+  <br><br>
   Account Name:<br>
   <input type="text" name="AccountName">
-  <br>
+  <br><br>
   <fieldset>
           <p>
              <label>Select Status</label>
              <select id = "Status">
                <option value = "1">New</option>
-             </select>
+             </select><br>
              
              <label>Select Priority</label>
              <select id = "Priority">
                <option value = "1">Medium</option>
-             </select>
+             </select><br>
              
              <label>Select Origin</label>
              <select id = "Case Origin">
                <option value = "1">Phone</option>
-             </select>
+             </select><br>
           </p>  
-  </fieldset>
+  </fieldset><br>
   Subject:<br>
   <input type="text" name="Subject">
-  <br>
+  <br><br>
   Description:<br>
   <input type="text" name="Description">
-  <br> 
+  <br><br> 
     <input type="submit" value="Submit">
-    <br>
+    <br><br>
     </form>
 </body>
 </html>
