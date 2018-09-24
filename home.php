@@ -43,7 +43,7 @@ a.active{
 </div>
 <div class="menu">
 <ul>
-  <li><a class="active">HOME</a></li>
+  <li><button onclick="CreateCase.php"><a class="active">HOME</a></button></li>
 </ul>
  <ul>
   <li><button onclick="CreateCase.php"><a class="active">Raise Case</a></button></li>
