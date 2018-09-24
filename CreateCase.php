@@ -49,17 +49,17 @@ All Raised Cases
              <label>Select Status</label>
              <select id = "Status">
                <option value = "1">New</option>
-             </select><br>
+             </select><br><br>
              
              <label>Select Priority</label>
              <select id = "Priority">
                <option value = "1">Medium</option>
-             </select><br>
+             </select><br><br>
              
              <label>Select Origin</label>
              <select id = "Case Origin">
                <option value = "1">Phone</option>
-             </select><br>
+             </select><br><br>
           </p>  
   </fieldset><br>
   Subject:<br>
