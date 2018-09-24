@@ -45,6 +45,9 @@ a.active{
 <ul>
   <li><a class="active">HOME</a></li>
 </ul>
+ <ul>
+  <li><a class="active">Raise Case</a></li>
+  </ul>
 </div>
 <div class="mainframe">
  <p>Welcome <?php echo $_POST['email']; ?> </p>
