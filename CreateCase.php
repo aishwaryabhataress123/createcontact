@@ -1,4 +1,38 @@
 <html>
+<head>
+<style>
+.header{
+}
+.logo{
+}
+.menu{
+background-color:#04C5F9;
+width:100%;
+height:40px;
+color:white;
+}
+ul{
+ list-style-type:none;
+}
+li a{
+float:left;
+  display: block;
+  text-align: center;
+  padding: 12px 25px;
+}
+li a:hover{
+  background-color:white;
+  color:#04C5F9;
+}
+a.active{
+      background-color:white;
+  color:#04C5F9;
+}
+.mainframe{
+}
+</style>
+</head>
+  
 <h1>
 All Raised Cases
 </h1>
