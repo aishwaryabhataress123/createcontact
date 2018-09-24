@@ -43,10 +43,10 @@ a.active{
 </div>
 <div class="menu">
 <ul>
-  <li><a href="CreateCase.php"><a class="active">HOME</a></a></li>
+  <li><a class="active"><a href="home.php">HOME</a></a></li>
 </ul>
  <ul>
-  <li><a href="CreateCase.php"><a class="active">Raise Case</a></a></li>
+  <li><a class="active"><a href="CreateCase.php">Raise Case</a></a></li>
   </ul>
 </div>
 <div class="mainframe">
