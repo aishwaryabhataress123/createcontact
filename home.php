@@ -46,7 +46,7 @@ a.active{
   <li><a class="active">HOME</a></li>
 </ul>
  <ul>
-  <li><button onclick="action_page.php"><a class="active">Raise Case</a></button></li>
+  <li><button onclick="CreateCase.php"><a class="active">Raise Case</a></button></li>
   </ul>
 </div>
 <div class="mainframe">
